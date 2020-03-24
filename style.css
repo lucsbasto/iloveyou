@@ -18,7 +18,7 @@ span {
     background-size: cover;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    animation: animate 2s infinite;
+    animation: animate 5s infinite;
 }
 
 @keyframes change-sz {

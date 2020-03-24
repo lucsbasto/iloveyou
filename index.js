@@ -1,4 +1,12 @@
-document.addEventListener("mousemove", function(e) {
+var event = "";
+console.log(screen.width);
+if (screen.width >= 1400) {
+  event = "mousemove";
+} else {
+  event = "touchmove";
+}
+
+document.addEventListener(event, function(e) {
   var body = document.querySelector("body");
   var heart = document.createElement("span");
   heart.setAttribute("class", "heart");
@@ -13,9 +21,4 @@ document.addEventListener("mousemove", function(e) {
   setTimeout(function() {
     heart.remove();
   }, 1000);
-});
-
-document.addEventListener("click", function(e) {
-  var heart = document.createElement("span");
-  heart.style.background = "url(core.png)";
 });
