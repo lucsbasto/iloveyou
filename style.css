@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    background: pink;
+    animation: change-color 5s infinite;
+}
+
+span {
+    position: absolute;
+    /* background: url(heart.png); */
+    background: url(core.png);
+    background-size: cover;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: animate 2s infinite;
+}
+
+@keyframes change-sz {
+    0% {}
+    100% {
+        background: url(core.png);
+    }
+}
+
+@keyframes change-color {
+    0% {
+        background-color: rgba(247, 110, 206, 0.849);
+    }
+    10% {
+        background-color: rgba(240, 132, 207, 0.8);
+    }
+    20% {
+        background-color: rgba(231, 163, 211, 0.849);
+    }
+    30% {
+        background-color: rgba(214, 69, 171, 0.767);
+    }
+    40% {
+        background-color: rgba(238, 74, 230, 0.849);
+    }
+    50% {
+        background-color: rgba(158, 79, 194, 0.849);
+    }
+    60% {
+        background-color: rgba(115, 72, 163, 0.849);
+    }
+    70% {
+        background-color: rgba(206, 31, 153, 0.849);
+    }
+    80% {
+        background-color: rgba(163, 64, 134, 0.849);
+    }
+    90% {
+        background-color: rgba(231, 163, 211, 0.849);
+    }
+    100% {
+        background-color: rgba(247, 110, 206, 0.849);
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -1000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
